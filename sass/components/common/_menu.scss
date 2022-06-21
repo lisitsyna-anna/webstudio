@@ -1,0 +1,238 @@
+.menu-button {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: fill 250ms $typical-time-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-button.is-open {
+  & .icon-cross {
+    display: block;
+  }
+
+  & .icon-menu {
+    display: none;
+  }
+}
+.page-header__menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 100vh;
+    z-index: 1;
+    padding: 48px 0 48px 40px;
+    background-color: $primery-white-color;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 305px;
+  }
+}
+
+.site-nav {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.site-nav__item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.site-nav__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  text-decoration: none;
+  transition: color 250ms $typical-time-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &--current {
+      color: $accent-color;
+      position: relative;
+    }
+  }
+}
+
+.site-nav__link--current::after {
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.contacts-nav {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-bottom: 64px;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contacts-nav__item {
+  &:not(:first-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts-nav__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $primery-text-color;
+
+  @media screen and (max-width: 767px) {
+    &--accent {
+      font-size: 34px;
+      line-height: 1.18;
+
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts-nav__icon {
+  margin-right: 8px;
+  fill: currentColor;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.social-nav {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.social-nav__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-nav__link {
+  display: block;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $accent-color;
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  &--border {
+    border: none;
+    padding: 0;
+  }
+}
