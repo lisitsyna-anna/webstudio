@@ -1596,6 +1596,14 @@ img {
   color: #fff;
 }
 
+@media screen and (max-width: 479px) {
+  .work-list__text {
+    font-size: 16px;
+    height: auto;
+    width: 270px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .work-list__text {
     max-width: 306px;
