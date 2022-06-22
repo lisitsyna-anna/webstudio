@@ -39,13 +39,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
     z-index: 1;
-    padding: 48px 0 48px 40px;
+    padding: 48px 40px 48px 40px;
     background-color: $primery-white-color;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
@@ -56,8 +58,8 @@
 }
 
 .nav {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    // margin-bottom: 302px;
   }
   @media screen and (min-width: $tablet) {
     margin-right: 84px;
@@ -96,7 +98,8 @@
   transition: color 250ms $typical-time-function;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &--current {
     color: $accent-color;
   }
 
@@ -108,7 +111,6 @@
     padding-bottom: 32px;
 
     &--current {
-      color: $accent-color;
       position: relative;
     }
   }
@@ -131,7 +133,7 @@
 .contacts-nav {
   @media screen and (max-width: 767px) {
     display: flex;
-    margin-bottom: 64px;
+    // margin-bottom: 64px;
     flex-direction: column-reverse;
   }
 
@@ -168,12 +170,16 @@
   text-decoration: none;
   color: $primery-text-color;
 
-  @media screen and (max-width: 767px) {
-    &--accent {
+  &--accent {
+    @media screen and (max-width: 767px) {
       font-size: 34px;
       line-height: 1.18;
 
       color: $accent-color;
+    }
+
+    @media screen and (max-width: 479px) {
+      font-size: 26px;
     }
   }
 
@@ -207,19 +213,30 @@
 .social-nav {
   display: flex;
 
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 
 .social-nav__item {
+  @media screen and (max-width: 479px) {
+    flex-basis: calc((100% - 15px) / 2);
+  }
+
   &:not(:last-child) {
-    margin-right: 10px;
+    @media screen and (min-width: $mobile) {
+      margin-right: 10px;
+    }
   }
 }
 
 .social-nav__link {
-  display: block;
+  display: inline-block;
   padding-right: 10px;
   font-weight: 500;
   font-size: 18px;
@@ -234,5 +251,9 @@
   &--border {
     border: none;
     padding: 0;
+  }
+  @media screen and (max-width: 479px) {
+    padding-right: 0;
+    border-right: none;
   }
 }
