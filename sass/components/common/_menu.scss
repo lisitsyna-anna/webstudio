@@ -241,7 +241,7 @@
 
 .social-nav__link {
   display: inline-block;
-  // padding-right: 10px;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -249,15 +249,4 @@
   text-decoration: none;
 
   color: $accent-color;
-
-  // border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-  // &--border {
-  //   border: none;
-  //   padding: 0;
-  // }
-  // @media screen and (max-width: 479px) {
-  //   padding-right: 10px;
-  //   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  // }
 }
