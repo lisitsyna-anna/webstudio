@@ -226,18 +226,22 @@
 .social-nav__item {
   @media screen and (max-width: 479px) {
     flex-basis: calc((100% - 15px) / 2);
+    max-width: 100px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 
   &:not(:last-child) {
     @media screen and (min-width: $mobile) {
       margin-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 10px;
     }
   }
 }
 
 .social-nav__link {
   display: inline-block;
-  padding-right: 10px;
+  // padding-right: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -246,14 +250,14 @@
 
   color: $accent-color;
 
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  // border-right: 1px solid rgba(33, 33, 33, 0.2);
 
-  &--border {
-    border: none;
-    padding: 0;
-  }
-  @media screen and (max-width: 479px) {
-    padding-right: 0;
-    border-right: none;
-  }
+  // &--border {
+  //   border: none;
+  //   padding: 0;
+  // }
+  // @media screen and (max-width: 479px) {
+  //   padding-right: 10px;
+  //   border-right: 1px solid rgba(33, 33, 33, 0.2);
+  // }
 }

@@ -10,6 +10,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -448,37 +452,27 @@ img {
   .social-nav__item {
     -ms-flex-preferred-size: calc((100% - 15px) / 2);
         flex-basis: calc((100% - 15px) / 2);
+    max-width: 100px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
 
 @media screen and (min-width: 480px) {
   .social-nav__item:not(:last-child) {
     margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
   }
 }
 
 .social-nav__link {
   display: inline-block;
-  padding-right: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #2196f3;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.social-nav__link--border {
-  border: none;
-  padding: 0;
-}
-
-@media screen and (max-width: 479px) {
-  .social-nav__link {
-    padding-right: 0;
-    border-right: none;
-  }
 }
 
 .hero {
